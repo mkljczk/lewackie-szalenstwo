@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>W ODMĘTACH LEWACKIEGO SZALEŃSTWA</title>
+  </head>
+  <body>
+    <div id="app">
+      <h1 id="header"></h1>
+      <button id="generate" onclick="generate()">Generuj</button>
+    </div>
+    <footer id="footer">
+      Wykonał <a href="https://mkljczk.pl/">Marcin Mikołajczak</a>
+    </footer>
+  </body>
+  <script>
+    const choices = [
+      [
+        "SZOK!",
+        "Nieprawdopodobne!",
+        "SKANDAL!",
+        "TEGO JUŻ ZA WIELE!",
+        "ZOBACZ!",
+        "Wstrząsające!",
+        "Nieoficjalnie:",
+        "TEGO NIE ZOBACZYSZ W MAINSTREAMOWYCH MEDIACH!",
+        "PILNE!",
+        "HIT!",
+        "Znów to zrobił!",
+        "Kompromitacja!",
+        "Nokaut dla lewactwa!",
+      ],
+      [
+        "Pijany",
+        "Agresywny",
+        "Finansowany przez Izrael",
+        "Proniemiecki",
+        "Zdradliwy",
+        "Nielegalnie przebywający w Polsce",
+        "Wściekły",
+        "Naćpany",
+        "Prorosyjski",
+        "Stojący ponad prawem",
+        "Antypolski",
+        "Finansowany przez Sorosa",
+        "Zwariowany",
+      ],
+      [
+        "Żyd",
+        "mason",
+        "lewak",
+        "Ukrainiec",
+        "muzułmanin",
+        "imigrant",
+        "polityk Platformy",
+        "Murzyn",
+        "sodomita",
+        "działacz LGBT",
+        "poseł lewicy",
+        "Donald Tusk",
+        "pederasta",
+      ],
+      [
+        "rozpętał bójkę",
+        "dokonał kradzieży",
+        "uciekał przed policją",
+        "podpalił krzyż",
+        "potrącił młodego patriotę",
+        "szykował zamach",
+        "zawiadomił prokuraturę",
+        "szokował antypolskimi hasłami",
+        "obrażał Polaków",
+        "obrażał Jana Pawła II",
+        "obnażał się",
+        "doniósł na Polaków",
+        "oczerniał bohaterów Powstania",
+      ],
+      [
+        "w sklepie spożywczym",
+        "w sejmie",
+        "w centrum miasta",
+        "na arenie międzynarodowej",
+        "na ulicach Warszawy",
+        "podczas kiermaszu bożonarodzeniowego",
+        "w niewielkiej miejscowości na Podlasiu",
+        "na trasie Marszu Niepodległości",
+        "podczas tzw. Marszu Równości",
+        "na marszu pseudoekologów",
+        "pod sądem rejonowym",
+        "pod pomnikiem Żołnierzy Wyklętych",
+        "podczas nielegalnego protestu Amnesty International",
+      ],
+      [
+        "oburzając polskich patriotów",
+        "raniąc matkę z dzieckiem",
+        "wbrew polskiej racji stanu",
+        "uszkadzając dobro narodowe",
+        "o czym lewackie media nie mówią",
+        "kompromitując Polskę",
+        "[ZOBACZ JAK]",
+        "czym zbulwersował lokalne środowiska patriotyczne",
+        "Tak wygląda postęp według zachodu.",
+        "o czym TVN „zapomniał” wspomnieć.",
+        "[NAGRANIE Z TELEFONU]",
+        "Policja odmawia komentarza.",
+        "zachodnie media obwiniły Polaków.",
+      ],
+    ];
+    const generate = () => {
+      document.querySelector('#header').innerHTML = choices.map(part => part[Math.floor(Math.random() * part.length)]).join(' ');
+    }
+    generate();
+  </script>
+  <style>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    }
+    #app {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      flex: 1;
+    }
+    #app h1 {
+      text-align: center;
+      padding: 0.5rem;
+      font-size: 2rem;
+    }
+    #app #generate {
+      background-color: lightseagreen;
+      color: #fff;
+      margin-top: 2rem;
+      padding: 1rem;
+      font-size: 1.5rem;
+      border: none;
+    }
+    #footer {
+      padding: 2rem 0.5rem;
+      background-color: lightseagreen;
+      color: #fff;
+      font-size: 1.25rem;
+      text-align: center;
+    }
+    #footer a {
+      color: #add;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    #footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</html>
